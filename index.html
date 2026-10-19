@@ -47,67 +47,67 @@
     }
 
     .decorazione.alto-sinistra {
-      width: 420px;
-      height: 420px;
-      top: -260px;
-      left: -180px;
+      width: 330px;
+      height: 330px;
+      top: -220px;
+      left: -150px;
       background: linear-gradient(135deg, #087f83, #bfe5df);
     }
 
     .decorazione.alto-destra {
-      width: 300px;
-      height: 300px;
-      top: -200px;
-      right: -130px;
+      width: 250px;
+      height: 250px;
+      top: -175px;
+      right: -115px;
       background: #ffcfb7;
     }
 
     .decorazione.basso-sinistra {
-      width: 430px;
-      height: 430px;
-      bottom: -310px;
-      left: -180px;
+      width: 350px;
+      height: 350px;
+      bottom: -270px;
+      left: -150px;
       background: linear-gradient(135deg, #ffcfb7, #ef8567);
     }
 
     .decorazione.basso-destra {
-      width: 520px;
-      height: 520px;
-      bottom: -350px;
-      right: -180px;
+      width: 400px;
+      height: 400px;
+      bottom: -290px;
+      right: -150px;
       background: linear-gradient(135deg, #c5e8e2, #087f83);
     }
 
     .contenitore {
-      width: min(1100px, 100%);
+      width: min(1000px, 100%);
       margin: 0 auto;
-      padding: 55px 24px 65px;
+      padding: 28px 24px 25px;
     }
 
     header {
       text-align: center;
-      max-width: 950px;
+      max-width: 850px;
       margin: 0 auto;
     }
 
     .badge {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      padding: 13px 26px;
+      gap: 10px;
+      padding: 9px 20px;
       background: var(--ottanio-chiaro);
       color: var(--ottanio-scuro);
       border-radius: 40px;
-      font-size: 15px;
+      font-size: 12px;
       font-weight: 700;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
     }
 
     h1 {
-      margin: 32px 0 12px;
-      font-size: clamp(38px, 5.5vw, 72px);
-      line-height: 1.13;
-      letter-spacing: -2px;
+      margin: 20px 0 8px;
+      font-size: clamp(34px, 4.2vw, 54px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
       color: var(--ottanio-scuro);
     }
 
@@ -117,7 +117,7 @@
 
     .titolo-lab {
       display: block;
-      margin-top: 8px;
+      margin-top: 5px;
       color: var(--ottanio);
     }
 
@@ -126,10 +126,10 @@
     }
 
     .scuola {
-      margin: 16px 0 0;
-      font-size: clamp(23px, 3vw, 36px);
+      margin: 10px 0 0;
+      font-size: clamp(21px, 2.6vw, 25px);
       font-weight: 700;
-      letter-spacing: 6px;
+      letter-spacing: 4px;
       color: var(--ottanio-scuro);
     }
 
@@ -137,15 +137,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 16px;
-      margin: 24px auto;
+      gap: 14px;
+      margin: 12px auto;
     }
 
     .separatore::before,
     .separatore::after {
       content: "";
       display: block;
-      width: 100px;
+      width: 85px;
       max-width: 20vw;
       height: 2px;
       background: var(--ottanio);
@@ -158,23 +158,23 @@
     }
 
     .atomo {
-      font-size: 35px;
+      font-size: 27px;
       color: var(--ottanio);
     }
 
     .subtitle {
       margin: 0;
-      font-size: clamp(17px, 2vw, 21px);
-      line-height: 1.6;
+      font-size: 16px;
+      line-height: 1.4;
       color: #64727b;
     }
 
     .cards {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 28px;
-      max-width: 1000px;
-      margin: 48px auto 0;
+      gap: 22px;
+      max-width: 880px;
+      margin: 26px auto 0;
     }
 
     .card {
@@ -182,16 +182,16 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 38px 32px 32px;
-      border-radius: 25px;
-      min-height: 340px;
-      box-shadow: 0 14px 35px rgba(18, 55, 68, 0.09);
+      padding: 24px 26px;
+      border-radius: 22px;
+      min-height: 260px;
+      box-shadow: 0 12px 28px rgba(18, 55, 68, 0.09);
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(18, 55, 68, 0.13);
+      transform: translateY(-4px);
+      box-shadow: 0 18px 35px rgba(18, 55, 68, 0.13);
     }
 
     .card.prenotazione {
@@ -208,13 +208,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 90px;
-      height: 90px;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
       color: white;
-      font-size: 44px;
-      margin-bottom: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+      font-size: 32px;
+      margin-bottom: 14px;
+      box-shadow: 0 7px 17px rgba(0, 0, 0, 0.10);
     }
 
     .prenotazione .icona {
@@ -226,15 +226,15 @@
     }
 
     h2 {
-      margin: 0 0 15px;
-      font-size: clamp(21px, 2.5vw, 26px);
+      margin: 0 0 10px;
+      font-size: 21px;
       color: var(--ottanio-scuro);
     }
 
     .card p {
-      font-size: 17px;
-      line-height: 1.6;
-      margin: 0 0 26px;
+      font-size: 15px;
+      line-height: 1.45;
+      margin: 0 0 16px;
       color: #465b65;
       flex: 1;
     }
@@ -243,12 +243,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 15px;
+      gap: 12px;
       width: 100%;
-      padding: 17px 22px;
+      padding: 13px 18px;
       border-radius: 40px;
       color: white;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: bold;
       text-decoration: none;
       transition: filter 0.2s;
@@ -267,18 +267,19 @@
     }
 
     footer {
-      margin-top: 40px;
+      margin-top: 22px;
       text-align: center;
       color: #71838a;
-      font-size: 13px;
+      font-size: 12px;
     }
 
     @media (max-width: 700px) {
       .contenitore {
-        padding: 38px 18px 45px;
+        padding: 32px 18px 40px;
       }
 
       h1 {
+        font-size: clamp(31px, 7vw, 42px);
         letter-spacing: -1px;
       }
 
@@ -287,20 +288,20 @@
       }
 
       .badge {
-        font-size: 12px;
-        letter-spacing: 2px;
+        font-size: 11px;
+        letter-spacing: 1.5px;
       }
 
       .cards {
         grid-template-columns: 1fr;
         max-width: 450px;
-        gap: 20px;
-        margin-top: 35px;
+        gap: 18px;
+        margin-top: 28px;
       }
 
       .card {
         min-height: 0;
-        padding: 30px 25px;
+        padding: 25px 22px;
       }
 
       .decorazione.alto-sinistra {
@@ -315,6 +316,41 @@
         height: 300px;
         bottom: -220px;
         right: -180px;
+      }
+    }
+
+    @media (max-height: 750px) and (min-width: 701px) {
+      .contenitore {
+        padding-top: 18px;
+      }
+
+      h1 {
+        font-size: 43px;
+        margin-top: 14px;
+      }
+
+      .separatore {
+        margin: 8px auto;
+      }
+
+      .cards {
+        margin-top: 18px;
+      }
+
+      .card {
+        padding: 20px 24px;
+        min-height: 235px;
+      }
+
+      .icona {
+        width: 56px;
+        height: 56px;
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      footer {
+        margin-top: 15px;
       }
     }
   </style>
