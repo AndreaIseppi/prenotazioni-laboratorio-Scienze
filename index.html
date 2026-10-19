@@ -5,18 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Prenotazioni Laboratorio</title>
+
   <style>
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f5f7;
       color: #111827;
     }
+
     header {
       text-align: center;
       padding: 80px 20px 60px;
     }
+
     .badge {
       color: #2563eb;
       background: #e7f0ff;
@@ -26,24 +30,28 @@
       font-weight: bold;
       letter-spacing: 2px;
     }
+
     h1 {
       font-size: clamp(36px, 5vw, 64px);
       margin: 45px 0 25px;
       letter-spacing: -2px;
     }
+
     .subtitle {
       font-size: 20px;
       color: #6b7280;
       line-height: 1.7;
     }
+
     .cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 25px;
-      max-width: 1300px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 20px;
     }
+
     .card {
       background: white;
       padding: 38px;
@@ -51,36 +59,62 @@
       border: 1px solid #e5e7eb;
       box-shadow: 0 3px 8px #00000012;
     }
+
     .card:first-child {
       background: #e7f0ff;
       border-color: #bfdbfe;
     }
-    .icon { font-size: 36px; color: #2563eb; }
-    h2 { font-size: 23px; margin-top: 25px; }
+
+    .icon {
+      font-size: 36px;
+      color: #2563eb;
+    }
+
+    h2 {
+      font-size: 23px;
+      margin-top: 25px;
+    }
+
     .card p {
       color: #6b7280;
       font-size: 17px;
       line-height: 1.8;
       min-height: 100px;
     }
+
     a {
       color: #2563eb;
       font-weight: bold;
       text-decoration: none;
     }
-    a:hover { text-decoration: underline; }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 800px) {
-      .cards { grid-template-columns: 1fr; }
-      header { padding: 50px 15px 20px; }
-      .card p { min-height: 0; }
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 50px 15px 20px;
+      }
+
+      .card p {
+        min-height: 0;
+      }
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <span class="badge">● PRENOTAZIONI ONLINE</span>
+
   <h1>Laboratori e dispositivi</h1>
+
   <p class="subtitle">
     Prenota il laboratorio e consulta<br>
     la disponibilità in tempo reale.
@@ -88,32 +122,46 @@
 </header>
 
 <main class="cards">
+
+  <!-- PRIMA OPZIONE: GOOGLE MODULI -->
   <section class="card">
     <div class="icon">▣</div>
+
     <h2>Nuova prenotazione</h2>
-    <p>Compila il modulo per prenotare il laboratorio.</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdT-GPLz7wydWPgiHwI9sqW-A_RFUOs-5q1gu5gSU7xSuptdQ/viewform?usp=dialog" target="_blank" rel="noopener">
+
+    <p>
+      Compila il modulo per prenotare il laboratorio.
+    </p>
+
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSdT-GPLz7wydWPgiHwI9sqW-A_RFUOs-5q1gu5gSU7xSuptdQ/viewform?usp=dialog"
+      target="_blank"
+      rel="noopener"
+    >
       Vai al modulo →
     </a>
   </section>
 
+  <!-- SECONDA OPZIONE: CALENDARIO -->
   <section class="card">
     <div class="icon">▤</div>
-    <h2>Disponibilità laboratorio</h2>
-    <p>Consulta gli orari e le prenotazioni confermate.</p>
-    <a href="https://script.google.com/macros/s/AKfycbxIT4WImPDZpN5adLG2lqLUu3bayUbZNx0-1VVY42UJ2MS-Ka1Pxv-pqaO57fbVWmkSXw/exec" target="_blank" rel="noopener">
+
+    <h2>Disponibilità laboratori</h2>
+
+    <p>
+      Consulta gli orari, verifica le disponibilità
+      e prenota direttamente dal calendario.
+    </p>
+
+    <a
+      href="https://script.google.com/macros/s/AKfycbxIT4WImPDZpN5adLG2lqLUu3bayUbZNx0-1VVY42UJ2MS-Ka1Pxv-pqaO57fbVWmkSXw/exec"
+      target="_blank"
+      rel="noopener"
+    >
       Visualizza →
     </a>
   </section>
 
-  <section class="card">
-    <div class="icon">▣</div>
-    <h2>Calendario prenotazioni</h2>
-    <p>Visualizza il calendario del laboratorio scolastico.</p>
-    <a href="https://script.google.com/macros/s/AKfycbxIT4WImPDZpN5adLG2lqLUu3bayUbZNx0-1VVY42UJ2MS-Ka1Pxv-pqaO57fbVWmkSXw/exec" target="_blank" rel="noopener">
-      Visualizza →
-    </a>
-  </section>
 </main>
 
 </body>
