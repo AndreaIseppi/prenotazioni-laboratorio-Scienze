@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Prenotazione Lab Scienze e Fisica – ISIS Follonica</title>
-  <meta name="description" content="Prenotazione online dei laboratori di Scienze e Fisica dell'ISIS Follonica. Consulta la disponibilità e prenota il laboratorio.">
+  <meta name="description" content="Prenotazione online dei laboratori di Scienze e Fisica dell'ISIS Follonica.">
 
   <style>
     :root {
@@ -81,7 +81,7 @@
     .contenitore {
       width: min(1000px, 100%);
       margin: 0 auto;
-      padding: 28px 24px 25px;
+      padding: 18px 24px 20px;
     }
 
     header {
@@ -94,7 +94,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 9px 20px;
+      padding: 8px 20px;
       background: var(--ottanio-chiaro);
       color: var(--ottanio-scuro);
       border-radius: 40px;
@@ -104,8 +104,8 @@
     }
 
     h1 {
-      margin: 20px 0 8px;
-      font-size: clamp(34px, 4.2vw, 54px);
+      margin: 14px 0 6px;
+      font-size: clamp(34px, 4.2vw, 50px);
       line-height: 1.08;
       letter-spacing: -1.5px;
       color: var(--ottanio-scuro);
@@ -126,7 +126,7 @@
     }
 
     .scuola {
-      margin: 10px 0 0;
+      margin: 8px 0 0;
       font-size: clamp(21px, 2.6vw, 25px);
       font-weight: 700;
       letter-spacing: 4px;
@@ -138,7 +138,7 @@
       align-items: center;
       justify-content: center;
       gap: 14px;
-      margin: 12px auto;
+      margin: 9px auto;
     }
 
     .separatore::before,
@@ -158,73 +158,86 @@
     }
 
     .atomo {
-      font-size: 27px;
+      font-size: 25px;
       color: var(--ottanio);
     }
 
     .subtitle {
       margin: 0;
-      font-size: 16px;
-      line-height: 1.4;
+      font-size: 15px;
+      line-height: 1.35;
       color: #64727b;
     }
 
+    /* GRIGLIA PRINCIPALE */
+
     .cards {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  max-width: 880px;
-  margin: 16px auto 0;
-}
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 22px;
+      row-gap: 12px;
+      max-width: 880px;
+      margin: 18px auto 0;
+    }
 
     .card {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 24px 26px;
+      padding: 18px 24px;
       border-radius: 22px;
-      min-height: 260px;
+      min-height: 235px;
       box-shadow: 0 12px 28px rgba(18, 55, 68, 0.09);
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-3px);
       box-shadow: 0 18px 35px rgba(18, 55, 68, 0.13);
     }
+
+    /* PRENOTAZIONE */
 
     .card.prenotazione {
       background: linear-gradient(145deg, #f2fbf9, #dff3f0);
       border: 1px solid #b9e4df;
     }
 
+    /* CALENDARIO */
+
     .card.calendario {
       background: linear-gradient(145deg, #fffaf6, #ffebdf);
       border: 1px solid #ffd3bd;
     }
 
-    /* NUOVA SEZIONE AMMINISTRATORE */
+    /* AMMINISTRATORE:
+       STESSA LARGHEZZA, ALTEZZA RIDOTTA */
 
     .card.amministratore {
       grid-column: 1 / -1;
       width: min(100%, 429px);
       justify-self: center;
+
+      min-height: 0;
+      padding: 10px 20px;
+
       background: linear-gradient(145deg, #f0f7f8, #e3eef0);
       border: 1px solid #bfd9dc;
-      min-height: 230px;
     }
+
+    /* ICONE */
 
     .icona {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 64px;
-      height: 64px;
+      width: 58px;
+      height: 58px;
       border-radius: 50%;
       color: white;
-      font-size: 32px;
-      margin-bottom: 14px;
+      font-size: 29px;
+      margin-bottom: 11px;
       box-shadow: 0 7px 17px rgba(0, 0, 0, 0.10);
     }
 
@@ -238,21 +251,42 @@
 
     .amministratore .icona {
       background: linear-gradient(135deg, #497b88, #174c5b);
+
+      width: 34px;
+      height: 34px;
+      font-size: 19px;
+      margin-bottom: 4px;
     }
 
+    /* TITOLI E TESTI */
+
     h2 {
-      margin: 0 0 10px;
+      margin: 0 0 9px;
       font-size: 21px;
       color: var(--ottanio-scuro);
     }
 
     .card p {
       font-size: 15px;
-      line-height: 1.45;
-      margin: 0 0 16px;
+      line-height: 1.4;
+      margin: 0 0 14px;
       color: #465b65;
       flex: 1;
     }
+
+    .amministratore h2 {
+      font-size: 17px;
+      margin: 0 0 4px;
+    }
+
+    .amministratore p {
+      font-size: 12px;
+      line-height: 1.25;
+      margin: 0 0 8px;
+      flex: none;
+    }
+
+    /* PULSANTI */
 
     .pulsante {
       display: flex;
@@ -260,7 +294,7 @@
       justify-content: center;
       gap: 12px;
       width: 100%;
-      padding: 13px 18px;
+      padding: 12px 18px;
       border-radius: 40px;
       color: white;
       font-size: 16px;
@@ -283,18 +317,23 @@
 
     .amministratore .pulsante {
       background: linear-gradient(90deg, #376f7c, #174c5b);
+      padding: 8px 12px;
+      font-size: 13px;
     }
 
     footer {
-      margin-top: 22px;
+      margin-top: 12px;
       text-align: center;
       color: #71838a;
       font-size: 12px;
     }
 
+    /* TABLET E TELEFONI */
+
     @media (max-width: 700px) {
+
       .contenitore {
-        padding: 32px 18px 40px;
+        padding: 25px 18px 35px;
       }
 
       h1 {
@@ -314,19 +353,19 @@
       .cards {
         grid-template-columns: 1fr;
         max-width: 450px;
-        gap: 18px;
-        margin-top: 28px;
+        gap: 15px;
+        margin-top: 24px;
       }
 
       .card {
         min-height: 0;
-        padding: 25px 22px;
+        padding: 22px 20px;
       }
 
       .card.amministratore {
         grid-column: auto;
         width: 100%;
-        min-height: 0;
+        padding: 14px 20px;
       }
 
       .decorazione.alto-sinistra {
@@ -344,42 +383,63 @@
       }
     }
 
+    /* SCHERMI DESKTOP POCO ALTI */
+
     @media (max-height: 750px) and (min-width: 701px) {
+
       .contenitore {
-        padding-top: 18px;
+        padding-top: 10px;
+        padding-bottom: 10px;
       }
 
       h1 {
-        font-size: 43px;
-        margin-top: 14px;
+        font-size: 42px;
+        margin-top: 10px;
       }
 
       .separatore {
-        margin: 8px auto;
+        margin: 6px auto;
       }
 
       .cards {
-        margin-top: 18px;
+        margin-top: 12px;
+        row-gap: 9px;
       }
 
       .card {
-        padding: 20px 24px;
-        min-height: 235px;
+        min-height: 205px;
+        padding: 14px 20px;
       }
 
       .card.amministratore {
-        min-height: 210px;
+        min-height: 0;
+        padding: 8px 20px;
       }
 
       .icona {
-        width: 56px;
-        height: 56px;
-        font-size: 28px;
-        margin-bottom: 10px;
+        width: 48px;
+        height: 48px;
+        font-size: 25px;
+        margin-bottom: 8px;
+      }
+
+      .amministratore .icona {
+        width: 30px;
+        height: 30px;
+        font-size: 17px;
+        margin-bottom: 3px;
+      }
+
+      .amministratore h2 {
+        margin-bottom: 3px;
+      }
+
+      .amministratore p {
+        margin-bottom: 5px;
       }
 
       footer {
-        margin-top: 15px;
+        margin-top: 9px;
       }
     }
   </style>
@@ -396,16 +456,25 @@
     <div class="contenitore">
 
       <header>
-        <div class="badge">▦ PRENOTAZIONI ONLINE</div>
+
+        <div class="badge">
+          ▦ PRENOTAZIONI ONLINE
+        </div>
 
         <h1>
-          <span class="titolo-principale">Prenotazione</span>
+          <span class="titolo-principale">
+            Prenotazione
+          </span>
+
           <span class="titolo-lab">
-            Lab Scienze <span class="fisica">e Fisica</span>
+            Lab Scienze
+            <span class="fisica">e Fisica</span>
           </span>
         </h1>
 
-        <div class="scuola">ISIS Follonica</div>
+        <div class="scuola">
+          ISIS Follonica
+        </div>
 
         <div class="separatore">
           <span class="atomo">⚛</span>
@@ -415,13 +484,15 @@
           Prenota il laboratorio e consulta<br>
           la disponibilità in tempo reale.
         </p>
+
       </header>
 
       <main class="cards">
 
-        <!-- PRENOTAZIONE DOCENTI -->
+        <!-- NUOVA PRENOTAZIONE -->
 
         <section class="card prenotazione">
+
           <div class="icona">✎</div>
 
           <h2>Nuova prenotazione</h2>
@@ -439,11 +510,13 @@
           >
             Vai al modulo →
           </a>
+
         </section>
 
-        <!-- CALENDARIO DISPONIBILITÀ -->
+        <!-- DISPONIBILITÀ LABORATORI -->
 
         <section class="card calendario">
+
           <div class="icona">▦</div>
 
           <h2>Disponibilità laboratori</h2>
@@ -461,19 +534,20 @@
           >
             Visualizza →
           </a>
+
         </section>
 
-        <!-- NUOVA AREA AMMINISTRATORE -->
+        <!-- AREA AMMINISTRATORE COMPATTA -->
 
         <section class="card amministratore">
+
           <div class="icona">⚙</div>
 
           <h2>Area amministratore</h2>
 
           <p>
-            Gestisci le prenotazioni, i blocchi DADA
-            e le disponibilità dei laboratori.
-            Accesso riservato con password.
+            Gestione prenotazioni e blocchi DADA.
+            Accesso riservato.
           </p>
 
           <a
@@ -484,6 +558,7 @@
           >
             Accedi all'area amministratore →
           </a>
+
         </section>
 
       </main>
