@@ -204,6 +204,17 @@
       border: 1px solid #ffd3bd;
     }
 
+    /* NUOVA SEZIONE AMMINISTRATORE */
+
+    .card.amministratore {
+      grid-column: 1 / -1;
+      width: min(100%, 429px);
+      justify-self: center;
+      background: linear-gradient(145deg, #f0f7f8, #e3eef0);
+      border: 1px solid #bfd9dc;
+      min-height: 230px;
+    }
+
     .icona {
       display: flex;
       align-items: center;
@@ -223,6 +234,10 @@
 
     .calendario .icona {
       background: linear-gradient(135deg, #ff9872, #d96e55);
+    }
+
+    .amministratore .icona {
+      background: linear-gradient(135deg, #497b88, #174c5b);
     }
 
     h2 {
@@ -266,6 +281,10 @@
       background: linear-gradient(90deg, #ff906b, #d96e55);
     }
 
+    .amministratore .pulsante {
+      background: linear-gradient(90deg, #376f7c, #174c5b);
+    }
+
     footer {
       margin-top: 22px;
       text-align: center;
@@ -304,6 +323,12 @@
         padding: 25px 22px;
       }
 
+      .card.amministratore {
+        grid-column: auto;
+        width: 100%;
+        min-height: 0;
+      }
+
       .decorazione.alto-sinistra {
         width: 250px;
         height: 250px;
@@ -340,6 +365,10 @@
       .card {
         padding: 20px 24px;
         min-height: 235px;
+      }
+
+      .card.amministratore {
+        min-height: 210px;
       }
 
       .icona {
@@ -390,6 +419,8 @@
 
       <main class="cards">
 
+        <!-- PRENOTAZIONE DOCENTI -->
+
         <section class="card prenotazione">
           <div class="icona">✎</div>
 
@@ -410,6 +441,8 @@
           </a>
         </section>
 
+        <!-- CALENDARIO DISPONIBILITÀ -->
+
         <section class="card calendario">
           <div class="icona">▦</div>
 
@@ -427,6 +460,29 @@
             rel="noopener noreferrer"
           >
             Visualizza →
+          </a>
+        </section>
+
+        <!-- NUOVA AREA AMMINISTRATORE -->
+
+        <section class="card amministratore">
+          <div class="icona">⚙</div>
+
+          <h2>Area amministratore</h2>
+
+          <p>
+            Gestisci le prenotazioni, i blocchi DADA
+            e le disponibilità dei laboratori.
+            Accesso riservato con password.
+          </p>
+
+          <a
+            class="pulsante"
+            href="https://script.google.com/macros/s/AKfycbxIT4WImPDZpN5adLG2lqLUu3bayUbZNx0-1VVY42UJ2MS-Ka1Pxv-pqaO57fbVWmkSXw/exec?admin=1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Accedi all'area amministratore →
           </a>
         </section>
 
