@@ -6,48 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Prenotazione Lab Scienze e Fisica – ISIS Follonica</title>
-  <meta name="description" content="Prenotazione online dei laboratori di Scienze e Fisica dell'ISIS Follonica.">
 
-  
-/* BILANCIAMENTO AREA AMMINISTRATORE */
+  <meta
+    name="description"
+    content="Prenotazione online dei laboratori di Scienze e Fisica dell'ISIS Follonica."
+  >
 
-@media (min-width: 701px) {
-
-  .cards {
-    row-gap: 10px;
-  }
-
-  .card.amministratore {
-    width: min(100%, 429px);
-    min-height: 0;
-    padding: 13px 20px;
-  }
-
-  .amministratore .icona {
-    width: 42px;
-    height: 42px;
-    font-size: 23px;
-    margin-bottom: 6px;
-  }
-
-  .amministratore h2 {
-    font-size: 19px;
-    margin-bottom: 5px;
-  }
-
-  .amministratore p {
-    font-size: 13px;
-    line-height: 1.3;
-    margin-bottom: 9px;
-  }
-
-  .amministratore .pulsante {
-    padding: 10px 14px;
-    font-size: 14px;
-  }
-}
-
-  
   <style>
     :root {
       --ottanio: #087f83;
@@ -55,7 +19,6 @@
       --ottanio-chiaro: #e0f3f0;
       --pesca: #ef8567;
       --pesca-scuro: #d96e55;
-      --pesca-chiaro: #fff0e7;
       --testo: #123744;
     }
 
@@ -78,6 +41,8 @@
       overflow: hidden;
       isolation: isolate;
     }
+
+    /* DECORAZIONI */
 
     .decorazione {
       position: absolute;
@@ -118,11 +83,15 @@
       background: linear-gradient(135deg, #c5e8e2, #087f83);
     }
 
+    /* CONTENITORE */
+
     .contenitore {
       width: min(1000px, 100%);
       margin: 0 auto;
-      padding: 18px 24px 20px;
+      padding: 15px 24px 18px;
     }
+
+    /* INTESTAZIONE */
 
     header {
       text-align: center;
@@ -144,7 +113,7 @@
     }
 
     h1 {
-      margin: 14px 0 6px;
+      margin: 13px 0 6px;
       font-size: clamp(34px, 4.2vw, 50px);
       line-height: 1.08;
       letter-spacing: -1.5px;
@@ -209,7 +178,7 @@
       color: #64727b;
     }
 
-    /* GRIGLIA PRINCIPALE */
+    /* GRIGLIA DEI RIQUADRI */
 
     .cards {
       display: grid;
@@ -237,31 +206,28 @@
       box-shadow: 0 18px 35px rgba(18, 55, 68, 0.13);
     }
 
-    /* PRENOTAZIONE */
+    /* RIQUADRO NUOVA PRENOTAZIONE */
 
     .card.prenotazione {
       background: linear-gradient(145deg, #f2fbf9, #dff3f0);
       border: 1px solid #b9e4df;
     }
 
-    /* CALENDARIO */
+    /* RIQUADRO DISPONIBILITÀ */
 
     .card.calendario {
       background: linear-gradient(145deg, #fffaf6, #ffebdf);
       border: 1px solid #ffd3bd;
     }
 
-    /* AMMINISTRATORE:
-       STESSA LARGHEZZA, ALTEZZA RIDOTTA */
+    /* RIQUADRO AMMINISTRATORE */
 
     .card.amministratore {
       grid-column: 1 / -1;
       width: min(100%, 429px);
       justify-self: center;
-
       min-height: 0;
-      padding: 10px 20px;
-
+      padding: 13px 20px;
       background: linear-gradient(145deg, #f0f7f8, #e3eef0);
       border: 1px solid #bfd9dc;
     }
@@ -291,14 +257,13 @@
 
     .amministratore .icona {
       background: linear-gradient(135deg, #497b88, #174c5b);
-
-      width: 34px;
-      height: 34px;
-      font-size: 19px;
-      margin-bottom: 4px;
+      width: 42px;
+      height: 42px;
+      font-size: 23px;
+      margin-bottom: 6px;
     }
 
-    /* TITOLI E TESTI */
+    /* TESTI */
 
     h2 {
       margin: 0 0 9px;
@@ -315,14 +280,14 @@
     }
 
     .amministratore h2 {
-      font-size: 17px;
-      margin: 0 0 4px;
+      font-size: 19px;
+      margin: 0 0 5px;
     }
 
     .amministratore p {
-      font-size: 12px;
-      line-height: 1.25;
-      margin: 0 0 8px;
+      font-size: 13px;
+      line-height: 1.3;
+      margin: 0 0 9px;
       flex: none;
     }
 
@@ -357,9 +322,11 @@
 
     .amministratore .pulsante {
       background: linear-gradient(90deg, #376f7c, #174c5b);
-      padding: 8px 12px;
-      font-size: 13px;
+      padding: 10px 14px;
+      font-size: 14px;
     }
+
+    /* PIÈ DI PAGINA */
 
     footer {
       margin-top: 12px;
@@ -368,7 +335,7 @@
       font-size: 12px;
     }
 
-    /* TABLET E TELEFONI */
+    /* TELEFONI */
 
     @media (max-width: 700px) {
 
@@ -453,7 +420,7 @@
 
       .card.amministratore {
         min-height: 0;
-        padding: 8px 20px;
+        padding: 11px 20px;
       }
 
       .icona {
@@ -464,18 +431,19 @@
       }
 
       .amministratore .icona {
-        width: 30px;
-        height: 30px;
-        font-size: 17px;
-        margin-bottom: 3px;
+        width: 38px;
+        height: 38px;
+        font-size: 21px;
+        margin-bottom: 5px;
       }
 
       .amministratore h2 {
-        margin-bottom: 3px;
+        font-size: 18px;
+        margin-bottom: 4px;
       }
 
       .amministratore p {
-        margin-bottom: 5px;
+        margin-bottom: 7px;
       }
 
       footer {
@@ -486,6 +454,7 @@
 </head>
 
 <body>
+
   <div class="pagina">
 
     <div class="decorazione alto-sinistra"></div>
@@ -577,7 +546,7 @@
 
         </section>
 
-        <!-- AREA AMMINISTRATORE COMPATTA -->
+        <!-- AREA AMMINISTRATORE -->
 
         <section class="card amministratore">
 
@@ -586,8 +555,7 @@
           <h2>Area amministratore</h2>
 
           <p>
-            Gestione prenotazioni e blocchi DADA.
-            Accesso riservato.
+            Gestione prenotazioni. Accesso riservato.
           </p>
 
           <a
@@ -609,5 +577,6 @@
 
     </div>
   </div>
+
 </body>
 </html>
